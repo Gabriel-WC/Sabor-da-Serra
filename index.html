@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabor da Serra — Cardápio Artesanal</title>
+  <meta name="description" content="Cardápio digital premium do Sabor da Serra. Cozinha artesanal de montanha, pizzas, bebidas e sobremesas. Monte seu pedido e finalize pelo WhatsApp.">
+  <meta name="author" content="Sabor da Serra">
+  <meta name="theme-color" content="#17372a">
+  <meta name="robots" content="index,follow">
+
+  <meta property="og:title" content="Sabor da Serra — Cardápio Artesanal">
+  <meta property="og:description" content="Sabores artesanais da serra em uma experiência digital moderna.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="imagens/hero.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="imagens/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Sabor da Serra — Página inicial">
+        <span class="logo__mark"><img src="imagens/logo.svg" alt="" width="48" height="48"></span>
+        <span class="logo__copy">
+          <span class="logo__title">Sabor da Serra</span>
+          <span class="logo__tagline">Sabores artesanais</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#mais-pedidos">Destaques</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#sobre">Nossa essência</a>
+      </nav>
+
+      <button class="cart-toggle" id="cartToggle" aria-label="Abrir carrinho" aria-expanded="false" aria-controls="cartPanel">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 3h2l2.2 10.1a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L20 7H6.2M10 20h.01M17 20h.01"/></svg>
+        <span class="cart-toggle__label">Pedido</span>
+        <span class="cart-toggle__count" id="cartCount" data-count="0">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <span class="eyebrow">Cozinha artesanal • Feito na serra</span>
+          <h1 id="hero-title">Comida que abraça.<br><em>Sabor que fica.</em></h1>
+          <p>Receitas com personalidade, ingredientes selecionados e aquele aconchego de comida feita com tempo e carinho.</p>
+          <div class="hero__actions">
+            <a href="#cardapio" class="btn btn--gold">Explorar cardápio <span aria-hidden="true">→</span></a>
+            <button class="btn btn--ghost-light" id="heroOrderBtn" type="button">Ver meu pedido</button>
+          </div>
+          <div class="hero__proof" aria-label="Diferenciais">
+            <span><strong>4,9</strong><small>avaliação demo</small></span>
+            <span><strong>20–35</strong><small>min de preparo</small></span>
+            <span><strong>100%</strong><small>experiência artesanal</small></span>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" data-reveal-delay="120">
+          <div class="hero__image-wrap">
+            <img src="imagens/hero.jpg" alt="Prato artesanal do Sabor da Serra" width="900" height="1100" fetchpriority="high" onerror="this.onerror=null;this.src='imagens/placeholder.svg'">
+          </div>
+          <div class="hero__floating-card hero__floating-card--top">
+            <span class="floating-icon">✦</span>
+            <div><strong>Produção artesanal</strong><small>Preparado com cuidado</small></div>
+          </div>
+          <div class="hero__floating-card hero__floating-card--bottom">
+            <span class="floating-icon">♥</span>
+            <div><strong>Favoritos da casa</strong><small>Escolhidos para você</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Diferenciais do restaurante">
+      <div class="container trust-strip__grid">
+        <article><span class="trust-strip__icon">◌</span><div><strong>Ingredientes selecionados</strong><small>Frescor e qualidade em cada receita</small></div></article>
+        <article><span class="trust-strip__icon">⌁</span><div><strong>Preparo cuidadoso</strong><small>Receitas artesanais feitas na hora</small></div></article>
+        <article><span class="trust-strip__icon">◇</span><div><strong>Pedido simples</strong><small>Escolha e finalize pelo WhatsApp</small></div></article>
+      </div>
+    </section>
+
+    <section class="featured section" id="mais-pedidos" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><span class="eyebrow eyebrow--dark">Favoritos da casa</span><h2 id="featured-title">Mais pedidos</h2></div>
+          <p>Uma seleção para quem quer começar pelos sabores que mais representam a experiência Sabor da Serra.</p>
+        </div>
+        <div class="featured-grid" id="featuredGrid"></div>
+      </div>
+    </section>
+
+    <section class="menu section" id="cardapio" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><span class="eyebrow eyebrow--dark">Escolha sem pressa</span><h2 id="menu-title">Nosso cardápio</h2></div>
+          <p>Busque, filtre, favorite e abra cada prato para ver detalhes antes de montar seu pedido.</p>
+        </div>
+
+        <div class="controls reveal">
+          <div class="search" role="search">
+            <label for="searchInput" class="sr-only">Buscar no cardápio</label>
+            <svg class="search__icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+            <input type="search" id="searchInput" class="search__input" placeholder="Buscar prato, ingrediente ou categoria..." autocomplete="off">
+          </div>
+          <button class="favorites-filter" id="favoritesFilter" type="button" aria-pressed="false" title="Mostrar apenas favoritos">
+            <span aria-hidden="true">♡</span> Favoritos
+          </button>
+        </div>
+
+        <div class="categories reveal" aria-label="Categorias do cardápio">
+          <button class="category category--active" data-category="todos" aria-pressed="true">Todos</button>
+          <button class="category" data-category="entradas" aria-pressed="false">Entradas</button>
+          <button class="category" data-category="pizzas" aria-pressed="false">Pizzas</button>
+          <button class="category" data-category="bebidas" aria-pressed="false">Bebidas</button>
+          <button class="category" data-category="sobremesas" aria-pressed="false">Sobremesas</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+        <p class="empty-state" id="emptyState" hidden>Nenhum item encontrado. Tente outro termo, categoria ou remova o filtro de favoritos.</p>
+      </div>
+    </section>
+
+    <section class="story section" id="sobre">
+      <div class="container story__grid">
+        <div class="story__visual reveal">
+          <img src="imagens/hero.jpg" alt="Culinária artesanal em ambiente acolhedor" loading="lazy" width="760" height="920" onerror="this.onerror=null;this.src='imagens/placeholder.svg'">
+          <div class="story__badge"><strong>Feito com calma</strong><span>e servido com afeto</span></div>
+        </div>
+        <div class="story__content reveal" data-reveal-delay="100">
+          <span class="eyebrow eyebrow--dark">Nossa essência</span>
+          <h2>Uma experiência inspirada no aconchego da serra.</h2>
+          <p>O Sabor da Serra nasce da ideia de transformar receitas simples em momentos memoráveis. Madeira, fogo, ingredientes frescos e apresentação cuidadosa formam a linguagem da casa.</p>
+          <div class="story__points">
+            <div><span>01</span><p><strong>Receitas autorais</strong>Combinações conhecidas com um toque próprio.</p></div>
+            <div><span>02</span><p><strong>Ingredientes honestos</strong>Menos excesso, mais sabor e equilíbrio.</p></div>
+            <div><span>03</span><p><strong>Pedido sem atrito</strong>Uma experiência direta do cardápio ao WhatsApp.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews section" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-heading section-heading--center reveal">
+          <div><span class="eyebrow eyebrow--dark">Experiência em destaque</span><h2 id="reviews-title">O tipo de impressão que a marca quer causar</h2></div>
+          <p>Depoimentos abaixo são conteúdos demonstrativos para apresentação comercial do layout.</p>
+        </div>
+        <div class="reviews__grid">
+          <article class="review-card reveal"><div class="stars" aria-label="5 estrelas">★★★★★</div><p>“O pedido foi simples, o cardápio é lindo e deu vontade de experimentar tudo.”</p><strong>Marina A.</strong><span>Conteúdo demonstrativo</span></article>
+          <article class="review-card reveal" data-reveal-delay="80"><div class="stars" aria-label="5 estrelas">★★★★★</div><p>“A apresentação dos pratos transmite cuidado antes mesmo do pedido chegar.”</p><strong>Lucas R.</strong><span>Conteúdo demonstrativo</span></article>
+          <article class="review-card reveal" data-reveal-delay="160"><div class="stars" aria-label="5 estrelas">★★★★★</div><p>“Visual premium, navegação rápida e sem complicação para pedir pelo WhatsApp.”</p><strong>Camila S.</strong><span>Conteúdo demonstrativo</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta section">
+      <div class="container">
+        <div class="cta__card reveal">
+          <div><span class="eyebrow">Seu momento começa aqui</span><h2>Escolha seus favoritos e monte o pedido.</h2><p>O carrinho organiza tudo para você finalizar pelo WhatsApp.</p></div>
+          <a href="#cardapio" class="btn btn--gold">Ver cardápio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand"><a href="#fim" class="logo logo--footer"><span class="logo__mark"><img src="imagens/logo.svg" alt="" width="48" height="48"></span><span class="logo__copy"><span class="logo__title">Sabor da Serra</span><span class="logo__tagline">Sabores artesanais</span></span></a><p>Cardápio digital demonstrativo criado para apresentar uma experiência de restaurante mais sofisticada.</p></div>
+      <div><strong>Explorar</strong><a href="#mais-pedidos">Mais pedidos</a><a href="#cardapio">Cardápio</a><a href="#sobre">Nossa essência</a></div>
+      <div><strong>Pedido</strong><button type="button" id="footerCartBtn">Abrir carrinho</button><span>Finalização pelo WhatsApp</span></div>
+    </div>
+    <div class="container footer__bottom"><span>© 2026 Sabor da Serra.</span><span>Demo de experiência digital.</span></div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Voltar ao topo">↑</button>
+
+  <dialog class="product-modal" id="productModal" aria-labelledby="productModalTitle">
+    <div class="product-modal__shell">
+      <button type="button" class="product-modal__close" id="productModalClose" aria-label="Fechar detalhes do produto">×</button>
+      <div class="product-modal__visual">
+        <img class="product-modal__image" id="productModalImage" src="imagens/placeholder.svg" alt="" width="900" height="1000">
+        <span class="product-modal__badge" id="productModalBadge">Destaque</span>
+      </div>
+      <div class="product-modal__body">
+        <div class="product-modal__meta"><span id="productModalCategory"></span><span>★ <strong id="productModalRating">4,9</strong></span></div>
+        <h2 class="product-modal__title" id="productModalTitle"></h2>
+        <p class="product-modal__description" id="productModalDescription"></p>
+        <div class="product-modal__facts">
+          <div><small>Preparo</small><strong id="productModalPrep"></strong></div>
+          <div><small>Serve</small><strong id="productModalServes"></strong></div>
+        </div>
+        <div class="product-modal__ingredients"><small>Ingredientes principais</small><p id="productModalIngredients"></p></div>
+        <label class="modal-note"><span>Observação para este item <small>(opcional)</small></span><textarea id="productModalNote" rows="2" maxlength="120" placeholder="Ex.: sem cebola, bem assada..."></textarea></label>
+        <div class="product-modal__purchase">
+          <div><small>A partir de</small><strong class="product-modal__price" id="productModalPrice"></strong></div>
+          <div class="quantity-control" aria-label="Quantidade">
+            <button type="button" id="productQuantityDecrease" aria-label="Diminuir quantidade">−</button>
+            <output id="productQuantity" aria-live="polite">1</output>
+            <button type="button" id="productQuantityIncrease" aria-label="Aumentar quantidade">+</button>
+          </div>
+        </div>
+        <button type="button" class="btn btn--green btn--block product-modal__add" id="productModalAdd"><span>Adicionar ao pedido</span><strong id="productModalAddTotal"></strong></button>
+      </div>
+    </div>
+  </dialog>
+
+  <aside class="cart" id="cartPanel" aria-label="Carrinho de pedidos" aria-hidden="true" aria-modal="true">
+    <div class="cart__overlay" id="cartOverlay"></div>
+    <div class="cart__panel">
+      <div class="cart__header">
+        <div><span class="eyebrow eyebrow--dark">Quase lá</span><h2 class="cart__title">Seu pedido</h2></div>
+        <button class="cart__close" id="cartClose" aria-label="Fechar carrinho">×</button>
+      </div>
+      <div class="cart__progress"><span id="cartProgressText">Adicione seus favoritos</span><div><i id="cartProgressBar"></i></div></div>
+      <div class="cart__body" id="cartBody"><p class="cart__empty">Seu carrinho está vazio.</p></div>
+      <div class="cart__note-wrap">
+        <label for="orderNote">Observações do pedido</label>
+        <textarea id="orderNote" rows="2" maxlength="180" placeholder="Ex.: retirar talheres, chamar no portão..."></textarea>
+      </div>
+      <div class="cart__footer">
+        <div class="cart__summary"><div><span>Subtotal</span><strong id="cartSubtotal">R$ 0,00</strong></div><div><span>Entrega</span><span>A combinar</span></div><div class="cart__total"><span>Total dos itens</span><strong id="cartTotal">R$ 0,00</strong></div></div>
+        <button class="btn btn--green btn--block" id="checkoutBtn" disabled><span>Pedir pelo WhatsApp</span><span aria-hidden="true">↗</span></button>
+        <small class="cart__disclaimer">Pagamento e entrega são combinados diretamente com o restaurante.</small>
+      </div>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><span class="toast__icon">✓</span><span id="toastMessage"></span></div>
+  <script src="script.js"></script>
+</body>
+</html>
