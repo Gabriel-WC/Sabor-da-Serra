@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Sabor da Serra</title>
+  <desc id="desc">Montanhas e pinheiros em dourado sobre fundo verde escuro</desc>
+  <rect width="96" height="96" rx="26" fill="#17372a"/>
+  <circle cx="73" cy="22" r="7" fill="#e2b660" opacity=".95"/>
+  <path d="M10 67 34 31l11 16 9-12 31 32H10Z" fill="#e2b660"/>
+  <path d="m24 67 24-30 12 15 7-9 18 24H24Z" fill="#f4eddf" opacity=".96"/>
+  <path d="M19 67h60" stroke="#e2b660" stroke-width="3" stroke-linecap="round"/>
+  <path d="M17 63v-18m-6 9 6-9 6 9m-10 2 4-6 4 6M79 64V45m-6 9 6-9 6 9m-10 2 4-6 4 6" fill="none" stroke="#f4eddf" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
