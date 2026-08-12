@@ -1,22 +1,37 @@
 # Sabor da Serra
 
-Cardápio digital responsivo, feito em HTML, CSS e JavaScript puro.
+Demo de cardápio digital responsivo desenvolvida para demonstrar uma solução moderna para restaurantes.
 
-## Estrutura
+## Demonstração online
+https://demo-sabor-da-serra.netlify.app/
 
-- `index.html` — estrutura, SEO básico e acessibilidade.
-- `style.css` — identidade visual e responsividade.
-- `script.js` — filtros, busca, carrinho, persistência local e checkout via WhatsApp.
-- `imagens/` — logo, hero, imagens dos pratos e fallback.
+## QR Code
+![QR Code da demo](assets/qr-code.png)
 
-## Antes de publicar
+## Funcionalidades
+- Cardápio digital responsivo
+- Busca por produtos
+- Filtros por categoria
+- Favoritos
+- Modal de detalhes
+- Carrinho lateral
+- Controle de quantidade
+- Observações do pedido
+- Integração com WhatsApp
+- Configuração centralizada com `config.js`
 
-1. Abra `script.js`.
-2. Substitua `WHATSAPP_NUMBER` pelo número real no formato internacional, somente números.
-   - Exemplo: `5547999999999`
-3. Troque as imagens ilustrativas pelas fotos reais dos pratos.
-4. Atualize `og:url`, `og:image` e a URL canônica se o domínio mudar.
+## Tecnologias
+- HTML5
+- CSS3
+- JavaScript
+- LocalStorage
+- Netlify
 
-## Pontos importantes
+## Executar localmente
+Basta abrir o arquivo `index.html` no navegador.
 
-O projeto não possui backend. O carrinho fica no `localStorage` do navegador e o pedido é enviado para o WhatsApp configurado.
+## Configuração
+Os principais dados do restaurante ficam centralizados em `config.js`.
+
+## Observação
+Este projeto é uma demonstração. Avaliações, horários, contatos e demais dados comerciais podem estar configurados como demonstrativos.
